@@ -1,12 +1,8 @@
 import styles from "./styles.module.scss";
 
-function MyButton() {
-  return (
-    <>
-      <button className={styles.btn}>M</button>
-      <button className={styles.btn2}>L</button>
-    </>
-  );
+function Button({ content }) {
+  const { btn } = styles;
+  return <button className={btn}>{content}</button>;
 }
 
-export default MyButton;
+export default Button;

@@ -1,7 +1,15 @@
 @use "@styles/_mixins.module" as mixins;
+@use "@styles/_variables.module" as var;
+@use "sass:map";
+
 .btn {
-  @include mixins.btn(30px, 30px, 0px);
-}
-.btn2 {
-  @include mixins.btn(44px, 44px, 50%);
+  @include mixins.btn(176px, 42px, 5px, map.get(var.$colors, primary));
+  color: map.get(var.$colors, white);
+  font-weight: 400;
+  cursor: pointer;
+  &:hover {
+    background-color: white;
+    color: black;
+    border: 1px solid map.get(var.$colors, primary);
+  }
 }

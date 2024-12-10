@@ -1,0 +1,21 @@
+@use "@styles/_mixins.module" as mixin;
+@use "@styles/_variables.module" as var;
+@use "sass:map";
+
+.container {
+  @include mixin.flex_box_custom(center, center, 0px);
+  background-image: url(../../assets/images/banner.jpeg);
+  min-height: 750px;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.content {
+  @include mixin.flex_box_custom(center, center, 10px);
+  flex-direction: column;
+}
+.title{
+  font-size: 42px;
+  color: map.get(var.$colors, four);
+  font-weight: 400;
+  margin: 0px 15px;
+}
