@@ -1,5 +1,10 @@
-$primary_color: #333;
-$seconddary_color: #888;
-$thr_color: #555;
-$white_color: #fff;
-$sub_color: #404040;
+// variables.module.scss
+// Lấy giá tri từ map  background-color: var.$colors.get(primary);
+
+$colors: (
+  primary: #333,
+  secondary: #888,
+  tertiary: #555,
+  white: #fff,
+  sub: #404040,
+);

@@ -1,7 +1,7 @@
-@import "@styles/_mixins.module.scss";
+@use "@styles/_mixins.module" as mixins;
 .btn {
-  @include btn(30px, 30px, 0px);
+  @include mixins.btn(30px, 30px, 0px);
 }
 .btn2 {
-  @include btn(44px, 44px, 50%);
+  @include mixins.btn(44px, 44px, 50%);
 }

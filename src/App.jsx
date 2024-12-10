@@ -7,10 +7,7 @@ function App() {
   return (
     <>
       <MainLayout>
-        {/* <MyHeader></MyHeader>
-        Content
-        <MyFooter></MyFooter> */}
-        <MyButton></MyButton>
+        <MyHeader></MyHeader>
       </MainLayout>
     </>
   );
