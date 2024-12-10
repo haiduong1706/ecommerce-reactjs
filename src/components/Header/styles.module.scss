@@ -2,18 +2,22 @@
 @use "@styles/_variables.module" as var;
 @use "sass:map";
 
+.container {
+  @include mixin.flex_box_custom(center, center, 0px);
+  background-color: bisque;
+}
 .containerHeader {
   display: flex;
+  width: 1250px;
   align-items: center;
-  justify-content: space-around;
-  background-color: bisque;
+  justify-content: space-between;
   height: 83px;
 }
 .containerBoxIcon {
   @include mixin.flex_box_custom(center, center, 5px);
 }
 .containerMenu {
-  @include mixin.flex_box_custom(center, center, 20px);
+  @include mixin.flex_box_custom(center, center, 40px);
 }
 .containerBox {
   @include mixin.flex_box_custom(center, center, 20px);
@@ -27,6 +31,11 @@
   color: map;
   width: 26px;
   height: 26px;
+}
+.menu {
+  cursor: pointer;
+  padding-top: 10px;
+  color: map.get(var.$colors, primary);
 }
 
 .menu::after {
