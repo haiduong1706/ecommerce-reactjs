@@ -1,0 +1,28 @@
+@use "@styles/_variables.module" as var;
+@use "@styles/_mixins.module" as mixin;
+@use "sass:map";
+
+.container {
+  background-color: map.get(var.$colors, primary);
+  margin-top: -75px;
+  padding: 20px 50px;
+
+  @include mixin.flex_box_custom(space-between, center, 0px);
+}
+.containerCard {
+  @include mixin.flex_box_custom(center, center, 18px);
+
+  width: 280px;
+  height: 104px;
+}
+.containerContent {
+  @include mixin.flex_box_custom(center, flex-start, 13px);
+  flex-direction: column;
+
+  .title,
+  .des {
+    color: map.get(var.$colors, white);
+    font-size: 17px;
+    font-weight: 300;
+  }
+}
