@@ -10,7 +10,13 @@ function Info() {
       <MainLayout>
         <div className={container}>
           {dataInfo.map((item) => {
-            return <InforCard content={item.title} description={item.description} src={item.src}></InforCard>;
+            return (
+              <InforCard
+                content={item.title}
+                description={item.description}
+                src={item.src}
+              ></InforCard>
+            );
           })}
         </div>
       </MainLayout>

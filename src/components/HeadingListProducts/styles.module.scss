@@ -1,0 +1,12 @@
+@use "@styles/_mixins.module" as mixin;
+@use "@styles/_variables.module" as var;
+@use "sass:map";
+
+.container {
+  @include mixin.flex_box_custom(space-between, center, 15px);
+  margin-top: 40px;
+}
+
+.containerItem {
+  @include mixin.flex_box_custom(center, center, 15px);
+}

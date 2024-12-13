@@ -1,0 +1,8 @@
+@use "@styles/_mixins.module" as mixin;
+@use "@styles/_variables.module" as var;
+
+.container {
+  margin-top: 10px;
+  flex-wrap: wrap;
+  @include mixin.flex_box_custom(space-between, center, 10px);
+}

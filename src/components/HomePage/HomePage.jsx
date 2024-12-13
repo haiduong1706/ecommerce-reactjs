@@ -1,16 +1,29 @@
-import MyFooter from "@components/Footer/Footer";
 import MyHeader from "@components/Header/Header";
-import MainLayout from "@components/Layout/Layout";
-import MyButton from "@components/Button/Button";
 import Banner from "@components/Banner/Banner";
-import styles from "./styles.module.scss";
+import AdcanceHeadling from "@components/AdvanceHeadling/AdvanceHeadling";
+import Info from "@components/Infor/Infor";
+import HeadingListProducts from "@components/HeadingListProducts/HeadingListProducts";
+import PoPularproduct from "@components/PopularProduct/PopularProduct";
+import { useState, useEffect } from "react";
+import { getProducts } from "@/apis/productsService";
 
 function HomePage() {
-  const { container } = styles;
+  const [listProducts, setListProducts] = useState([]);
+  useEffect(() => {
+    getProducts().then((res) => {
+      setListProducts(res.contents);
+    });
+  }, []);
+
   return (
-    <div className={container}>
+    <div>
       <MyHeader></MyHeader>
       <Banner></Banner>
+      <Info></Info>
+      <AdcanceHeadling></AdcanceHeadling>
+      <HeadingListProducts data={listProducts.slice(0, 2)} />
+      <PoPularproduct data={listProducts.slice(2, listProducts.length)} />
+      <div style={{ height: "300px" }}></div>
     </div>
   );
 }
